@@ -28,5 +28,19 @@ echo ""
 # Banner show up
 show_banner
 
-# Test footer
+#---------------------------------------------------------------------------
+# Load and Run Modules
+#---------------------------------------------------------------------------
+print_info "Loading modules..."
+
+# Source and run system_info module
+if [ -f "${SCRIPT_DIR}/modules/system_info.sh" ]; then
+    source "${SCRIPT_DIR}/modules/system_info.sh"
+    run_system_info_module
+else
+    print_error "system_info.sh module not found!"
+fi
+
+
+# show footer
 show_footer

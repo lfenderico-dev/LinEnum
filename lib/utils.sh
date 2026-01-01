@@ -22,7 +22,7 @@ print_error() {
 }
 
 # print an important finding
-print_finding() {
+print_important() {
     echo -e "${YELLOW}[!] $1${NC}"
 }
 
@@ -79,7 +79,7 @@ command_exists() {
 
 # EXPORTS
 export -f print_section
-export -f print_finding
+export -f print_important
 export -f print_critical
 export -f print_success
 export -f print_error
