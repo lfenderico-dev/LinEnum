@@ -41,6 +41,13 @@ else
     print_error "system_info.sh module not found!"
 fi
 
+# Source and run user_enum module
+if [ -f "${SCRIPT_DIR}/modules/user_enum.sh" ]; then
+    source "${SCRIPT_DIR}/modules/user_enum.sh"
+    run_user_enum_module
+else
+    print_error "user_enum.sh module not found!"
+fi
 
 # show footer
 show_footer
